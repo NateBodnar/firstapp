@@ -66,5 +66,5 @@ Firstapp::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
   # Needs to change host to production host
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.default_url_options = { :host => 'http://pacific-retreat-4446.herokuapp.com/' }
 end
