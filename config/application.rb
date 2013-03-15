@@ -60,6 +60,6 @@ module Firstapp
     config.assets.version = '1.0'
 
     #Required Devise on Heroku
-    config.assets.initializer_on_precompile = false
+    config.assets.initializer_on_precompile = true
   end
 end
