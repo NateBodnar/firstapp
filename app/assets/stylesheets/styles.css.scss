@@ -4,7 +4,7 @@ $baseFrontFamily: Helvetica;
 /*@import url(http://);*/
 $baseFontSize: 16px;
 /*Button Color*/
-$btnPrimaryBackground: blue;
+$btnPrimaryBackground: navy;
 
 /*Navbar Color*/
 /*$navbarBackgroundHiglight: black;
@@ -12,6 +12,8 @@ $navbarBackground: black;*/
 /*$navbarBrandCover: black;*/
 $navbarText: white;
 $bodyBackground: black;
+
+$wellBackground: darkgray;
 
 @import 'bootstrap';
 
