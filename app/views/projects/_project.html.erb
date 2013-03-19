@@ -9,7 +9,6 @@
 		</strong>
 	</p>
 	<p>
-  <%= link_to 'View', project %>
 	  <% if current_user == project.user %>
 		  <%= link_to 'Edit', edit_project_path(project) %>
 		  <%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %>

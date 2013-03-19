@@ -17,6 +17,7 @@
         	<ul class="nav">
         	 <li><%= link_to "Home", root_path %></li>
   			   <li><%= link_to "About", about_path %></li>
+           <li><%= link_to "Projects", projects_path %></li>
        	  </ul> 
 
        		<ul class="nav pull-right">
@@ -27,10 +28,7 @@
               <% else %>
           		<li><%= link_to "Login", new_user_session_path %></l
                 
-              <% end %>
-                <form class="navbar-search pull-left">
-                    <input type="text" class="search-query" placeholder="Search">     
-                </form>
+              <% end %>   
        	  </ul> 
 
         </div>
