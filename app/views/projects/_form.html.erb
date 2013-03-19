@@ -1,7 +1,10 @@
 <%= simple_form_for(@project, html: { class: "form-horizontal"}) do |f| %>
   <%= f.error_notification %>
-
-    <%= f.input :desvription, as: :text, input_html: {rows: "3"} %>
+  <%= f.full_error :image_file_size, class: "alert aleart-error" %>
+  <%= f.full_error :image_content_type, class: "alert aleart-error" %>
+  
+  	<%= f.input :image, label: 'Upload an Image' %>
+    <%= f.input :desvription, as: :text, input_html: {rows: "3"}, label: 'Description' %>
 
 
   <div class="form-actions">
