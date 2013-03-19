@@ -72,7 +72,7 @@ Firstapp::Application.configure do
   config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
-      :bucket => "unitetogether",
+      :bucket => "unitetogether2",
       :access_key_id => "AKIAITAS7KTKYJR6JTYQ",
       :secret_access_key => "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"
     }
