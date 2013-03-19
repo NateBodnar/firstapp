@@ -67,4 +67,14 @@ Firstapp::Application.configure do
 
   # Needs to change host to production host
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  # Paperclip will work on Heroku using Amazon S3
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => "unitetogether",
+      :access_key_id => "AKIAITAS7KTKYJR6JTYQ",
+      :secret_access_key => "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"
+    }
+  }
 end
