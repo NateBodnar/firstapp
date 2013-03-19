@@ -1,9 +1,19 @@
-<tr>
-			<td><%= image_tag project.image(:medium) %></td>
-      <td><%= project.desvription %></td>
-      <td><%= link_to 'View', project %></td>
-      <% if current_user == project.user %>
-	      <td><%= link_to 'Edit', edit_project_path(project) %></td>
-	      <td><%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-	    <% end %>
-    </tr>
+<div class="box">
+	<%= link_to (image_tag project.image(:medium)), project %>
+	<p class="description">
+		<%= project.desvription %>
+	</p>
+	<p>
+		<strong>
+			Posted by <%= project.user.name %>
+		</strong>
+	</p>
+	<p>
+  <%= link_to 'View', project %>
+	  <% if current_user == project.user %>
+		  <%= link_to 'Edit', edit_project_path(project) %>
+		  <%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %>
+		<% end %>
+	</p>
+</div>	
+    
