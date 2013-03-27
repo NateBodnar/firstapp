@@ -2,9 +2,9 @@
   <%= f.error_notification %>
   <%= f.full_error :image_file_size, class: "alert aleart-error" %>
   <%= f.full_error :image_content_type, class: "alert aleart-error" %>
-  
+  	<%= f.input :title, as: :text, input_html: {rows: "1"}, label: 'Title' %>
   	<%= f.input :image, label: 'Upload an Image' %>
-    <%= f.input :desvription, as: :text, input_html: {rows: "3"}, label: 'Description' %>
+    <%= f.input :desvription, as: :text, input_html: {rows: "10"}, label: 'Description' %>
 
 
   <div class="form-actions">

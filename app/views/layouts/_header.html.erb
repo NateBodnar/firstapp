@@ -9,9 +9,11 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </a>
-   
+        <a href="/" class="brand">
+         <img alt="Unite" src="/assets/UniteBrand.jpg" width="45">
+        </a>  
         <!-- Be sure to leave the brand out there if you want it shown -->
-        <%= link_to "UNITE", root_path, class: "brand" %>
+        <!--<%= link_to "UNITE", root_path, class: "brand" %>-->
         <!-- Everything you want hidden at 940px or less, place within here -->
         <div class="nav-collapse collapse">
         	<ul class="nav">
@@ -22,10 +24,12 @@
 
        		<ul class="nav pull-right">
               <% if user_signed_in? %>
+              <li><%= link_to "Your Projects", index_user_path %></li>
               <li><%= link_to "Add Project +", new_project_path %></li>
               <li><%= link_to "Profile", edit_user_registration_path %></li>
               <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
               <% else %>
+              <li><%= link_to "Create an Account", new_user_registration_path %></li>
           		<li><%= link_to "Login", new_user_session_path %></l
                 
               <% end %>   

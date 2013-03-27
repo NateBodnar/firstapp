@@ -82,4 +82,7 @@ before_filter :authenticate_user!, except: [:index,:show]
       format.json { head :no_content }
     end
   end
+  def index_user 
+    @projects = current_user.projects.all
+  end
 end

@@ -2,11 +2,12 @@ Firstapp::Application.routes.draw do
 
   resources :projects
 
-
   devise_for :users
-
+  resources :users, :only => [:show]
   root :to => 'pages#home'
   get 'about' => 'pages#about'
+  get 'index_user' => 'projects#index_user'
+  get 'users/:id/projects' => 'users#show', :as => :userprojects
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
