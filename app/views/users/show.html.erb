@@ -1,22 +1,20 @@
-<div class="box">
-	<%= link_to (image_tag project.image(:medium)), project %>
-	
-	<p class="description">
-		<strong>
-			<u>
-				<%= project.title %>
-			</u>
-		</strong>	
-	</p>
-		
-	<p>
-			Posted by <%= project.user.name %>
-	</p>
+<div class="hero-unit">
+  <div class="box">
+    <p>
+  	  <a href="">
+			  <img alt="profilepicture" src= <%= @user.image(:medium) %> >
+		  </a>	
+    </p>
+  </div>
 
-	<p>
-	  <% if current_user == project.user %>
-		  <%= link_to 'Edit', edit_project_path(project), class: "btn btn-mini btn-primary" %> 
-		  <%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-mini btn-primary" %>
-		<% end %>
-	</p>
+  <h1><%= @user.name %></h1>
+  <p><strong><%= @user.city %></strong></p>
+  <p><%= @user.bio %></p>
+  <p>
+    <%= mail_to @user.email, "UNITE with User", class: "btn btn-large btn-primary" %>
+  </p>
+
 </div>
+<p>
+	<%= render @projects %>
+</p>

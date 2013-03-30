@@ -13,8 +13,6 @@ $navbarBackground: black;*/
 $navbarText: white;
 $bodyBackground: black;
 
-$wellBackground: black;
-
 $linkColor: darkorange;
 
 @import 'bootstrap';
@@ -67,6 +65,7 @@ body{
 	border-radius: 5px;
 	box-shadow: 1px 1px 10px #444;
 	width: 214px;
+	background-color: #a9a9a9;
 }
 
 .box img {
@@ -92,8 +91,14 @@ body{
 	border-radius: 5px;
 	box-shadow: 3px 3px 25px #444;
 	width: 535px;
+	background-color: #a9a9a9;
 }
 
 .form-actions {
 	background-color: black;
+}
+
+.hero-unit {
+	font-size: 16px;
+	background-color: #a9a9a9;
 }

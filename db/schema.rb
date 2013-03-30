@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130327013935) do
+ActiveRecord::Schema.define(:version => 20130330133704) do
 
   create_table "projects", :force => true do |t|
     t.string   "desvription"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20130327013935) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.string   "title"
+    t.string   "image_remote_url"
   end
 
   add_index "projects", ["user_id"], :name => "index_projects_on_user_id"

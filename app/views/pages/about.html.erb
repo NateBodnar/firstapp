@@ -1,3 +1,4 @@
+<div class="hero-unit">
 <div class="row">
 	<div class="span6">
 		<h1>About</h1>
@@ -10,11 +11,15 @@
 		<p>		
 			UNITE brings all types of creative people together in one general location. The ability to get in contact with and network with other creative people allows for a unique experience.
 			Post your individual projects or work as a team with other UNITE users to continue to express your creativity in what ever manner you see fit!
-		</p>	
+		</p>
+		<p>
+			Need Support or more information, contact us through email: nathanieltbodnar@gmail.com
+		</p>
 	<p>
 		<% if user_signed_in? %>
 		<% else %> 
 		<%= link_to "Create an Account!",new_user_registration_path, class: "btn btn-large btn-primary"%>
 		<% end %>
 	</p>
+</div>
 </div>

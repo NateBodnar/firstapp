@@ -15,6 +15,6 @@ class User < ActiveRecord::Base
 
   has_many :projects, dependent: :destroy
   
-  has_attached_file :image, styles: { medium: "320x240>" }
+  has_attached_file :image, styles: { medium: "240x180>" }
 end
  

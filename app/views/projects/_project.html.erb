@@ -10,10 +10,8 @@
 	</p>
 		
 	<p>
-			Posted by <%= project.user.name %>
-	</p>
+		<%= link_to project.user.name, user_show_path(:id => project.user_id),class: "btn btn-mini btn-primary" %>
 
-	<p>
 	  <% if current_user == project.user %>
 		  <%= link_to 'Edit', edit_project_path(project), class: "btn btn-mini btn-primary" %> 
 		  <%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-mini btn-primary" %>
