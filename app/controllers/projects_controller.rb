@@ -87,6 +87,8 @@ before_filter :authenticate_user!, except: [:index,:show]
     @projects = current_user.projects.all
 
     respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @projects }
       format.js
     end
   end
