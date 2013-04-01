@@ -85,5 +85,9 @@ before_filter :authenticate_user!, except: [:index,:show]
   end
   def index_user 
     @projects = current_user.projects.all
+
+    respond_to do |format|
+      format.js
+    end
   end
 end

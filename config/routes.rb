@@ -1,5 +1,8 @@
 Firstapp::Application.routes.draw do
 
+  resources :comments
+
+
   resources :projects
 
   devise_for :users

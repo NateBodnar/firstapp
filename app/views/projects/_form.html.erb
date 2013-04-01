@@ -1,7 +1,9 @@
 <%= simple_form_for(@project, html: { class: "form-horizontal"}) do |f| %>
+
   <%= f.error_notification %>
   <%= f.full_error :image_file_size, class: "alert aleart-error" %>
   <%= f.full_error :image_content_type, class: "alert aleart-error" %>
+
   	<%= f.input :title, as: :text, input_html: {rows: "1"}, label: 'Title' %>
   	<%= f.input :image, label: 'Upload an Image' %>
   	<%= f.input :image_remote_url, label: "Upload with a URL" %>
@@ -9,6 +11,6 @@
 
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, class: 'btn btn-primary', :disable_with =>'Uploading Project...' %>
   </div>
 <% end %>
