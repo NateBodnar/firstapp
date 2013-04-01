@@ -18,10 +18,11 @@
 		  <p>
 			  <%= link_to @project.user.name, user_show_path(:id => @project.user_id),class: "btn btn-mini btn-primary" %>
 		  </p>
+		  	<%= link_to (content_tag :i, "", class: "icon-arrow-left icon-2x"), projects_path %>
 		  <% if current_user == @project.user %>
-			  <%= link_to 'Edit', edit_project_path(@project), class: "btn btn-mini btn-primary" %> 
+			  <%= link_to (content_tag :i, "", class: "icon-edit icon-2x"), edit_project_path(@project) %> 
 			<% end %>  
-				<%= link_to 'Back', projects_path, class: "btn btn-mini btn-primary" %>
+			
 		</div>
 	</div>
 </div>

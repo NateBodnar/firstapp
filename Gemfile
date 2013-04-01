@@ -6,6 +6,9 @@ gem 'devise'
 gem 'simple_form'
 gem 'paperclip', "~> 3.0"
 gem 'aws-sdk'
+gem 'will_paginate', '~> 3.0.3'
+gem 'bootstrap-will_paginate', '0.0.6'
+gem 'webrick', '1.3.1'
 
 group :production do
 	gem 'pg'

@@ -3,9 +3,9 @@
 	
 	<p class="description">
 		<strong>
-			<u>
+			
 				<%= project.title %>
-			</u>
+			
 		</strong>	
 	</p>
 		
@@ -13,8 +13,8 @@
 		<%= link_to project.user.name, user_show_path(:id => project.user_id),class: "btn btn-mini btn-primary" %>
 
 	  <% if current_user == project.user %>
-		  <%= link_to 'Edit', edit_project_path(project), class: "btn btn-mini btn-primary" %> 
-		  <%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-mini btn-primary" %>
+		  <%= link_to (content_tag :i, "", class: "icon-edit icon-2x"), edit_project_path(project) %> 
+		  <%= link_to (content_tag :i, "", class: "icon-remove icon-2x"), project, method: :delete, data: { confirm: 'Are you sure?' } %>
 		<% end %>
 	</p>
 </div>	

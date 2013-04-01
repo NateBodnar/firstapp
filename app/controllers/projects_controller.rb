@@ -4,11 +4,12 @@ before_filter :authenticate_user!, except: [:index,:show]
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.order("created_at desc")
+    @projects = Project.order("created_at desc").page(params[:page]).per_page(20)
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @projects }
+      format.js
     end
   end
 

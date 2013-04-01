@@ -1,5 +1,5 @@
 class Project < ActiveRecord::Base
-  attr_accessible :title, :desvription, :image
+  attr_accessible :title, :desvription, :image, :image_remote_url
 
 
   validates :title, presence: true, :length => {:maximum => 50}
@@ -12,4 +12,8 @@ class Project < ActiveRecord::Base
   belongs_to :user
   has_attached_file :image, styles: { medium: "320x240>" }
   
+  def image_remote_url=(url_value)
+    self.image = URI.parse(url_value) unless url_value.blank?
+    super
+  end  
 end
