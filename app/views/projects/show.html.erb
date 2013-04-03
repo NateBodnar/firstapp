@@ -12,6 +12,9 @@
 		  </p>
 
 		  <p>
+		  	<%= link_to "More Information", @project.vid, class: "btn btn-mini btn-primary" %>
+		  </p>	
+		  <p>
 			  <%= link_to @project.user.name, user_show_path(:id => @project.user_id),class: "btn btn-mini btn-primary" %>
 		  </p>
 		  	<%= link_to (content_tag :i, "", class: "icon-arrow-left icon-2x"), projects_path %>

@@ -94,7 +94,7 @@ body{
 }
 
 .form-actions {
-	background-color: black;
+	background-color: #a9a9a9;
 }
 
 .hero-unit {
@@ -104,5 +104,20 @@ body{
 }
 
 .steps {
-	padding-top: 60px;
+	padding-top: 45px;
+}
+
+.block {
+	margin: 5px;
+	padding: 5px;
+	font-size: 11px;
+	line-height: 1.4em;
+	float: left;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	box-shadow: 1px 1px 10px #444;
+	width: 560px;
+	background-color: #a9a9a9;
+	color: black;
 }

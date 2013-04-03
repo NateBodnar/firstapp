@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130401194304) do
+ActiveRecord::Schema.define(:version => 20130403004929) do
+
+  create_table "comments", :force => true do |t|
+    t.integer  "pin_id"
+    t.text     "content"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "user_id"
+  end
 
   create_table "projects", :force => true do |t|
     t.string   "desvription"
@@ -24,6 +32,7 @@ ActiveRecord::Schema.define(:version => 20130401194304) do
     t.datetime "image_updated_at"
     t.string   "title"
     t.string   "image_remote_url"
+    t.string   "vid"
   end
 
   add_index "projects", ["user_id"], :name => "index_projects_on_user_id"
