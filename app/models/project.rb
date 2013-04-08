@@ -3,7 +3,7 @@ class Project < ActiveRecord::Base
 
 
   validates :title, presence: true, :length => {:maximum => 50}
-  validates :desvription, presence: true, :length => {:maximum => 1000}
+  validates :desvription, presence: true, :length => {:maximum => 10000}
 	validates :user_id, presence: true
 	validates_attachment :image, presence: true,
 															 content_type: {content_type: ['image/jpeg', 'image/jpg', 'image/png', 'image/gif']},
