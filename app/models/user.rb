@@ -8,8 +8,8 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, 
  									:name, :bio, :city, :image
- 	validate :bio, presence: true, :length => {:maximum => 10000}
- 	validate :city, presence: true, :length => {:maximum => 25}
+ 	validate :bio, presence: true
+ 	validate :city, presence: true
  	validates_attachment :image, content_type: {content_type: ['image/jpeg', 'image/jpg', 'image/png', 'image/gif']}, size: { less_than: 5.megabytes }
   # attr_accessible :title, :body
 

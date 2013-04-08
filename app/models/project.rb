@@ -2,8 +2,8 @@ class Project < ActiveRecord::Base
   attr_accessible :title, :desvription, :image, :image_remote_url, :vid
 
 
-  validates :title, presence: true, :length => {:maximum => 50}
-  validates :desvription, presence: true, :length => {:maximum => 10000}
+  validates :title, presence: true
+  validates :desvription, presence: true
 	validates :user_id, presence: true
 	validates_attachment :image, presence: true,
 															 content_type: {content_type: ['image/jpeg', 'image/jpg', 'image/png', 'image/gif']},
